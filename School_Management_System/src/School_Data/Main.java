@@ -48,6 +48,7 @@ public static void main(String[] args)
 	   System.out.println("SNHSS spent salary to "+Sathya.getName()+" is "+SNHSS.getTotalMoneyEarned());
 	   System.out.println(Lavanya);
 	   System.out.println(Geetha);
+	   System.out.println(KarthiKeyan);
 	   Sunitha.receivesalary(Sunitha.getsalary());
 	   System.out.println(Sunitha);
 	   Amutha.receivesalary(Amutha.getsalary());
