@@ -1,5 +1,4 @@
 package School_Data;
-
 public class Student 
 {
 	private int Studentid;
@@ -7,7 +6,6 @@ public class Student
 	private int Grade;
 	private int  Feespaid;
 	private int Totalfees;
-	
 	public  Student(int Studentid,String name,int Grade)
 	{
 		 this. Totalfees=30000;
@@ -40,8 +38,18 @@ public class Student
 	{
 		this.Grade=grade;
 	}
-	public void UpdateFeespaid(int feespaid)
+	public void PayFees(int fees)
 	{
-		Feespaid+=feespaid;
+	    Feespaid+=fees;
+		School_Main.updateTotalMoneyEarned(Feespaid);
+	}
+	public int getremainingfees()
+	{
+		return Totalfees-Feespaid;
+	}
+	@Override()
+	public String toString()
+	{
+		return "Student Name: "+name+", Total Fees Paid So Far: "+Feespaid;
 	}
 }
