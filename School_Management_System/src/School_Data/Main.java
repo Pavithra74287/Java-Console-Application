@@ -49,6 +49,7 @@ public static void main(String[] args)
 	   System.out.println(Lavanya);
 	   System.out.println(Geetha);
 	   System.out.println(KarthiKeyan);
+	   System.out.println(SathyaPriya);
 	   Sunitha.receivesalary(Sunitha.getsalary());
 	   System.out.println(Sunitha);
 	   Amutha.receivesalary(Amutha.getsalary());
