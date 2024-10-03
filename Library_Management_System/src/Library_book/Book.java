@@ -3,18 +3,18 @@ import java.util.*;
 public class Book 
 {
 	private int book_id;
-	private String book_name;
+	private String title;
 	private String author_name;
 	private int yearofpublish;
-	private boolean b;
+	private boolean isavailable;
 	
 	public Book(int id,String name,String author_name,int year,boolean bln)
 	{
 		this.book_id=id;
-		this.book_name=name;
+		this.title=name;
 		this.author_name=author_name;
 		this.yearofpublish=year;
-		this.b=bln;
+		this.isavailable=bln;
 	}
 	
 	public int getbook_id()
@@ -23,7 +23,7 @@ public class Book
 	}
 	public String getbook_name()
 	{
-		return this.book_name;
+		return this.title;
 	}
 	public int getbook_author()
 	{
@@ -33,8 +33,20 @@ public class Book
 	{
 		return this.yearofpublish;
 	}
-	public void setbook_id(boolean b1)
+	public boolean isavailable ()
 	{
-		this.b=b1;
+		return this.isavailable;
+	}
+	public void setisavailable(boolean b1)
+	{
+	    isavailable=b1;
+	}
+	public String toString() {
+        return "Book{" +
+                "bookId=" + book_id +
+                ", title='" + title + '\'' +
+                ", author='" + author_name + '\'' +
+                ", isAvailable=" + isavailable +
+                '}';
 	}
 }
