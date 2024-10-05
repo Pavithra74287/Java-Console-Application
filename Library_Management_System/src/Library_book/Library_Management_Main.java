@@ -53,5 +53,43 @@ public class Library_Management_Main
                 }
             }
         }
+        public static void main(String[] args) {
+            Library_Management_Main library = new Library_Management_Main();
+            Scanner scanner = new Scanner(System.in);
+            //library.addBook(new Book(1, "The Great Gatsby", "F. Scott Fitzgerald"));
+            //library.addBook(new Book(2, "1984", "George Orwell"));
+            //library.addBook(new Book(3, "To Kill a Mockingbird", "Harper Lee"));
+            //library.addUser(new User(1, "Alice"));
 
-}
+            while (true) {
+                System.out.println("===== Library Management System =====");
+                System.out.println("1. View Available Books");
+                System.out.println("2. Borrow a Book");
+                System.out.println("3. Return a Book");
+                System.out.println("4. Exit");
+                System.out.print("Enter your choice: ");
+                int choice = scanner.nextInt();
+
+                switch (choice) {
+                    case 1:
+                        library.viewAvailableBooks();
+                        break;
+                    case 2:
+                        System.out.print("Enter Book ID to borrow: ");
+                        int borrowId = scanner.nextInt();
+                        library.borrowBook(library.users.get(0), borrowId); 
+                        break;
+                    case 3:
+                        System.out.print("Enter Book ID to return: ");
+                        int returnId = scanner.nextInt();
+                        library.returnBook(library.users.get(0), returnId);
+                        break;
+                    case 4:
+                        System.out.println("Exiting...");
+                        return;
+                    default:
+                        System.out.println("Invalid choice. Please try again.");
+                }
+            }
+        }
+    }
