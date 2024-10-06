@@ -56,10 +56,10 @@ public class Library_Management_Main
         public static void main(String[] args) {
             Library_Management_Main library = new Library_Management_Main();
             Scanner scanner = new Scanner(System.in);
-            //library.addBook(new Book(1, "The Great Gatsby", "F. Scott Fitzgerald"));
-            //library.addBook(new Book(2, "1984", "George Orwell"));
-            //library.addBook(new Book(3, "To Kill a Mockingbird", "Harper Lee"));
-            //library.addUser(new User(1, "Alice"));
+            library.addBook(new Book(1, "The Great Gatsby", "F. Scott Fitzgerald"));
+            library.addBook(new Book(2, "1984", "George Orwell"));
+            library.addBook(new Book(3, "To Kill a Mockingbird", "Harper Lee"));
+            library.addUser(new User(1, "Alice"));
 
             while (true) {
                 System.out.println("===== Library Management System =====");

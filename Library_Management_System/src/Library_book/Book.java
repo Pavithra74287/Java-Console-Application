@@ -7,6 +7,9 @@ public class Book
 	private String author_name;
 	private int yearofpublish;
 	private boolean isavailable;
+	public Book(int id, String name, String author_name) {
+	    this(id, name, author_name, 0, true);
+	}
 	
 	public Book(int id,String name,String author_name,int year,boolean bln)
 	{
